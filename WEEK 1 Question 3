@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class VendingMachine {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Display the menu
+        System.out.println("Press 1 for juice or 2 for soda.");
+
+        // Get the user's choice
+        int choice = scanner.nextInt();
+
+        // Check the choice and print the appropriate message
+        if (choice == 1) {
+            System.out.println("Dispensing juice.");
+        } else if (choice == 2) {
+            System.out.println("Dispensing soda.");
+        } else {
+            System.out.println("Invalid choice.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+OUTPUT
+Press 1 for juice or 2 for soda.
+1
+Dispensing juice.
