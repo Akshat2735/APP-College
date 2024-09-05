@@ -1,50 +1,43 @@
-public class Rectangle {
+public class Person {
     // Attributes
-    private double width;
-    private double height;
+    private String name;
+    private int age;
+    private String address;
 
-    // Constructor
-    public Rectangle(double width, double height) {
-        this.width = width;
-        this.height = height;
+    // Default constructor
+    public Person() {
+        this.name = "Unknown";
+        this.age = 0;
+        this.address = "Unknown";
     }
 
-    // Method to calculate the area of the rectangle
-    public double getArea() {
-        return width * height;
+    // Parameterized constructor
+    public Person(String name, int age, String address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
     }
 
-    // Method to calculate the perimeter of the rectangle
-    public double getPerimeter() {
-        return 2 * (width + height);
+    // Method to display person information
+    public void displayPersonInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Address: " + address);
     }
 
-    // Getter and Setter methods for width
-    public double getWidth() {
-        return width;
-    }
-
-    public void setWidth(double width) {
-        this.width = width;
-    }
-
-    // Getter and Setter methods for height
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
-    // Main method to test the Rectangle class
+    // Main method to test the class
     public static void main(String[] args) {
-        // Create a Rectangle object
-        Rectangle rect = new Rectangle(5.0, 3.0);
+        // Creating an object using the default constructor
+        Person person1 = new Person();
+        System.out.println("Person 1 Information:");
+        person1.displayPersonInfo();
         
-        // Calculate and print area and perimeter
-        System.out.println("Area: " + rect.getArea());
-        System.out.println("Perimeter: " + rect.getPerimeter());
+        System.out.println(); // New line for separation
+
+        // Creating an object using the parameterized constructor
+        Person person2 = new Person("John Doe", 30, "123 Main St");
+        System.out.println("Person 2 Information:");
+        person2.displayPersonInfo();
     }
 }
 
