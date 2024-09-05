@@ -1,0 +1,61 @@
+public class Rectangle {
+    // Attributes
+    private double width;
+    private double height;
+
+    // Constructor
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    // Method to calculate the area of the rectangle
+    public double getArea() {
+        return width * height;
+    }
+
+    // Method to calculate the perimeter of the rectangle
+    public double getPerimeter() {
+        return 2 * (width + height);
+    }
+
+    // Getter and Setter methods for width
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    // Getter and Setter methods for height
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    // Main method to test the Rectangle class
+    public static void main(String[] args) {
+        // Create a Rectangle object
+        Rectangle rect = new Rectangle(5.0, 3.0);
+        
+        // Calculate and print area and perimeter
+        System.out.println("Area: " + rect.getArea());
+        System.out.println("Perimeter: " + rect.getPerimeter());
+    }
+}
+
+
+SAMPLE OUTPUT
+Person 1 Information:
+Name: Unknown
+Age: 0
+Address: Unknown
+
+Person 2 Information:
+Name: John Doe
+Age: 30
+Address: 123 Main St
